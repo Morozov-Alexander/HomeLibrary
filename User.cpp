@@ -39,3 +39,13 @@ void User::setPassword(int password)
 {
 	return	role;
 }
+
+ void User::addRestrictions(Restriction restr)
+ {
+	 this->restrictions->push_back(restr);
+ }
+
+ std::vector<Restriction>* User::getRestrictions()
+ {
+	 return this->restrictions;
+ }

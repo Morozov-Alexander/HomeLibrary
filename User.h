@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Role.h"
+#include "Restriction.h"
 ref class User
 {
 private:
@@ -9,6 +10,7 @@ private:
 	int password;
 	System::String^ login;
 	Role role;
+	std::vector<Restriction>* restrictions;
 public:
 	System::String^ getName();
 	void setName(System::String^);
@@ -18,5 +20,8 @@ public:
 	void setLogin(System::String^);
 	void setRole(Role);
 	Role getRole(Role);
+
+	void addRestrictions(Restriction);
+	std::vector<Restriction>* getRestrictions();
 };
 

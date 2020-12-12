@@ -12,20 +12,20 @@ void Restriction::setTime(System::String^ time)
 
 System::String^ Restriction::getData()
 {
-	return System::String();
+	return data;
 }
 
 System::String^ Restriction::getTime()
 {
-	return System::String();
+	return time;
 }
 
-Media Restriction::setMedia(Media)
+void Restriction::setMedia(System::String^ media)
 {
-	return Media();
+	this->media = media;
 }
 
-void Restriction::getMedia()
+System::String^ Restriction::getMedia()
 {
-	throw gcnew System::NotImplementedException();
+	return media;
 }
