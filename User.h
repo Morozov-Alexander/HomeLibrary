@@ -1,7 +1,8 @@
 #pragma once
-#include <string>
 #include "Role.h"
 #include "Restriction.h"
+#include <cliext/vector>
+
 ref class User
 {
 private:
@@ -10,8 +11,10 @@ private:
 	int password;
 	System::String^ login;
 	Role role;
-	std::vector<Restriction>* restrictions;
+	cliext::vector<Restriction^> restrictions;
+
 public:
+
 	System::String^ getName();
 	void setName(System::String^);
 	void setSurName(System::String^);
@@ -21,7 +24,7 @@ public:
 	void setRole(Role);
 	Role getRole(Role);
 
-	void addRestrictions(Restriction);
-	std::vector<Restriction>* getRestrictions();
+	void addRestrictions(Restriction^);
+	cliext::vector<Restriction^> getRestrictions();
 };
 

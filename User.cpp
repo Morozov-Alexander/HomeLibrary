@@ -40,12 +40,12 @@ void User::setPassword(int password)
 	return	role;
 }
 
- void User::addRestrictions(Restriction restr)
+ void User::addRestrictions(Restriction^ restr)
  {
-	 this->restrictions->push_back(restr);
+	 restrictions.push_back(restr);
  }
 
- std::vector<Restriction>* User::getRestrictions()
+ cliext::vector<Restriction^> User::getRestrictions()
  {
-	 return this->restrictions;
+	 return restrictions;
  }

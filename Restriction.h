@@ -1,6 +1,5 @@
 #pragma once
 #include "Media.h"
-#include <vector>
 ref class Restriction
 {
 private:
@@ -9,6 +8,7 @@ private:
 	System::String^ media;
 
 public:
+	
 	void setData(System::String^);
 	void setTime(System::String^);
 	System::String^ getData();
@@ -16,7 +16,6 @@ public:
 
 	void setMedia(System::String^);
 	System::String^ getMedia();
-
 
 };
 

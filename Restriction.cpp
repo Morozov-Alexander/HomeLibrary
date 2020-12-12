@@ -1,5 +1,6 @@
 #include "Restriction.h"
 
+
 void Restriction::setData(System::String^ data)
 {
 	this->data = data;

@@ -1,8 +1,9 @@
 #pragma once
 #include "User.h"
+#include "cliext/vector"
 ref class Users
 {
 public:
-	std::vector<User>* users;
+	cliext::vector<User^> users;
 };
 

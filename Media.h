@@ -1,7 +1,7 @@
 #pragma once
 #include"Rating.h"
 #include"Comment.h"
-#include<vector>
+#include <cliext/vector>
 ref class Media
 {
 private:
@@ -22,10 +22,11 @@ public:
 	System::String^ getDate();
 	System::String^ getfile();
 
-	std::vector<Rating>* rating;
-	std::vector<Comment>* comments;
 
-	virtual void playMedia() = 0;
+	cliext::vector<Rating^> rating;
+	cliext::vector<Comment^> comments;
+
+	virtual void playMedia() {};
 
 
 

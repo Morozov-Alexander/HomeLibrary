@@ -119,23 +119,35 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddUserForm.cpp" />
+    <ClCompile Include="AllMedia.cpp" />
     <ClCompile Include="AuthorizationForm.cpp" />
+    <ClCompile Include="Catalogs.cpp" />
+    <ClCompile Include="Comment.cpp" />
     <ClCompile Include="CreateUserForm.cpp" />
     <ClCompile Include="DeleteUserForm.cpp" />
     <ClCompile Include="FamilyManagement.cpp" />
+    <ClCompile Include="Film.cpp" />
     <ClCompile Include="HomeLibrary.cpp" />
     <ClCompile Include="Media.cpp" />
+    <ClCompile Include="MediaCatalog.cpp" />
+    <ClCompile Include="Music.cpp" />
+    <ClCompile Include="Photo.cpp" />
+    <ClCompile Include="Rating.cpp" />
     <ClCompile Include="Restriction.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserManagerForm.cpp" />
+    <ClCompile Include="Users.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddUserForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="AllMedia.h" />
     <ClInclude Include="AuthorizationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Catalogs.h" />
+    <ClInclude Include="Comment.h" />
     <ClInclude Include="CreateUserForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -143,13 +155,19 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
+    <ClInclude Include="Film.h" />
     <ClInclude Include="Media.h" />
+    <ClInclude Include="MediaCatalog.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="Photo.h" />
+    <ClInclude Include="Rating.h" />
     <ClInclude Include="Restriction.h" />
     <ClInclude Include="Role.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="UserManagerForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Users.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AuthorizationForm.resx">
