@@ -2,16 +2,16 @@
 #include "Role.h"
 #include "Users.h"
 #include "IUserManager.h"
-ref class FamilyManagement : public IUserManager
+ref class FamilyManagement 
 {
 public:
 	Users^ users;
-	void createFamilyMember(System::String^,int, Role, System::String^, System::String^);
-	bool deleteFamilyMember(System::String^);
-	bool transferRights(System::String^);
-	bool addRestrictions(System::String^);
-	System::String^ showAllUsers();
-	bool editFamilyMember(System::String^,int);
+	void createFamilyMember(System::String^,int, Role, System::String^, System::String^) override;
+	bool deleteFamilyMember(System::String^) override;
+	bool transferRights(System::String^) override;
+	bool addRestrictions(System::String^) override;
+	System::String^ showAllUsers() override;
+	bool editFamilyMember(System::String^,int) override;
 
 };
 

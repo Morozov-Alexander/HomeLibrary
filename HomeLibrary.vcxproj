@@ -123,6 +123,7 @@
     <ClCompile Include="AuthorizationController.cpp" />
     <ClCompile Include="AuthorizationForm.cpp" />
     <ClCompile Include="Catalogs.cpp" />
+    <ClCompile Include="CatalogsControlForm.cpp" />
     <ClCompile Include="Comment.cpp" />
     <ClCompile Include="CreateUserForm.cpp" />
     <ClCompile Include="DeleteUserForm.cpp" />
@@ -132,8 +133,10 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="LibraryInjector.cpp" />
     <ClCompile Include="LibraryManagement.cpp" />
+    <ClCompile Include="MainMenuForm.cpp" />
     <ClCompile Include="Media.cpp" />
     <ClCompile Include="MediaCatalog.cpp" />
+    <ClCompile Include="MediaLoader.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Photo.cpp" />
     <ClCompile Include="Rating.cpp" />
@@ -153,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="AuthorizationInterface.h" />
     <ClInclude Include="Catalogs.h" />
+    <ClInclude Include="CatalogsControlForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Comment.h" />
     <ClInclude Include="CreateUserForm.h">
       <FileType>CppForm</FileType>
@@ -162,13 +168,19 @@
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="IMediaLoader.h" />
     <ClInclude Include="Input.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="IUserManager.h" />
     <ClInclude Include="LibraryInjector.h" />
     <ClInclude Include="LibraryManagement.h" />
+    <ClInclude Include="MainMenuForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Media.h" />
     <ClInclude Include="MediaCatalog.h" />
+    <ClInclude Include="MediaLoader.h" />
     <ClInclude Include="Music.h" />
     <ClInclude Include="Photo.h" />
     <ClInclude Include="Rating.h" />
