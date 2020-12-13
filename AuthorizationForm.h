@@ -2,6 +2,7 @@
 #include "AuthorizationInterface.h"
 #include "AuthorizationController.h"
 #include "UserManagerForm.h"
+#include "MainMenuForm.h"
 	
 
 namespace HomeLibrary {
@@ -20,7 +21,7 @@ namespace HomeLibrary {
 	{
 	public:
 		AuthorizationController^ auto_ctr;
-		UserManagerForm^ user_manager_form;
+		MainMenuForm^ user_manager_form;
 		AuthorizationForm(void)
 		{
 			InitializeComponent();

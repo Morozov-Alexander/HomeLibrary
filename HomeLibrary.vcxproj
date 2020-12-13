@@ -196,8 +196,14 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CatalogsControlForm.resx">
+      <DependentUpon>CatalogsControlForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Input.resx">
       <DependentUpon>Input.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagerForm.resx">
       <DependentUpon>UserManagerForm.h</DependentUpon>

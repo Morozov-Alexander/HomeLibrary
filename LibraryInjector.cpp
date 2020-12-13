@@ -2,6 +2,7 @@
 #include "UserManagerForm.h"
 #include "AuthorizationController.h"
 #include "AuthorizationInterface.h"
+#include "MainMenuForm.h"
 void LibraryInjector::initialization()
 {
 	Catalogs catalogs;
@@ -17,10 +18,10 @@ void LibraryInjector::initialization()
 
 	FamilyManagement familyManagment;
 	familyManagment.users = users;
-	HomeLibrary::UserManagerForm^ user_manager_form = gcnew HomeLibrary::UserManagerForm;
+	HomeLibrary::MainMenuForm^manager_form = gcnew HomeLibrary::MainMenuForm;
 	HomeLibrary::AuthorizationForm^ aut_form = gcnew HomeLibrary::AuthorizationForm;
 	aut_form->auto_ctr = autorization;
-	aut_form->user_manager_form = user_manager_form;
+	aut_form->user_manager_form = manager_form;
 	aut_form->Show();
 }
 

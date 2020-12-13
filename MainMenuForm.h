@@ -1,5 +1,6 @@
 #pragma once
-
+#include "CatalogsControlForm.h"
+#include "UserManagerForm.h"
 namespace HomeLibrary {
 
 	using namespace System;
@@ -34,6 +35,9 @@ namespace HomeLibrary {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ button1;
+	protected:
+	private: System::Windows::Forms::Button^ button2;
 
 	private:
 		/// <summary>
@@ -48,12 +52,52 @@ namespace HomeLibrary {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MainMenuForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(87, 246);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(330, 190);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"”правление пользовател€ми";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MainMenuForm::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(517, 246);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(330, 190);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"”правление каталогами";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MainMenuForm::button2_Click);
+			// 
+			// MainMenuForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(980, 638);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
+			this->Name = L"MainMenuForm";
+			this->Text = L"MainMenuForm";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		HomeLibrary::UserManagerForm^ um = gcnew HomeLibrary::UserManagerForm;
+		um->Show();
+
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		HomeLibrary::CatalogsControlForm^ um = gcnew HomeLibrary::CatalogsControlForm;
+		um->Show();
+
+	}
 	};
 }
