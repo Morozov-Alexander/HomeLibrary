@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="AddUserForm.cpp" />
     <ClCompile Include="AllMedia.cpp" />
+    <ClCompile Include="AuthorizationController.cpp" />
     <ClCompile Include="AuthorizationForm.cpp" />
     <ClCompile Include="Catalogs.cpp" />
     <ClCompile Include="Comment.cpp" />
@@ -128,6 +129,9 @@
     <ClCompile Include="FamilyManagement.cpp" />
     <ClCompile Include="Film.cpp" />
     <ClCompile Include="HomeLibrary.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LibraryInjector.cpp" />
+    <ClCompile Include="LibraryManagement.cpp" />
     <ClCompile Include="Media.cpp" />
     <ClCompile Include="MediaCatalog.cpp" />
     <ClCompile Include="Music.cpp" />
@@ -143,9 +147,11 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="AllMedia.h" />
+    <ClInclude Include="AuthorizationController.h" />
     <ClInclude Include="AuthorizationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="AuthorizationInterface.h" />
     <ClInclude Include="Catalogs.h" />
     <ClInclude Include="Comment.h" />
     <ClInclude Include="CreateUserForm.h">
@@ -156,6 +162,11 @@
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="Input.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="LibraryInjector.h" />
+    <ClInclude Include="LibraryManagement.h" />
     <ClInclude Include="Media.h" />
     <ClInclude Include="MediaCatalog.h" />
     <ClInclude Include="Music.h" />
@@ -172,6 +183,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input.resx">
+      <DependentUpon>Input.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagerForm.resx">
       <DependentUpon>UserManagerForm.h</DependentUpon>

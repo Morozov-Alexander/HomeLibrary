@@ -7,7 +7,7 @@ System::String^ User::getName()
 
 void User::setName(System::String^ name)
 {
-	this->name = name;
+	this->name = gcnew System::String(name);
 }
 
 void User::setSurName(System::String^ surname)
@@ -29,6 +29,16 @@ void User::setPassword(int password)
 {
 	this->login = login;
 }
+
+ System::String^ User::getLogin()
+ {
+	 return login;
+ }
+
+ int User::getPassword()
+ {
+	 return password;
+ }
 
  void User::setRole(Role role)
 {

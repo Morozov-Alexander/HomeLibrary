@@ -1,4 +1,8 @@
 #pragma once
+#include "AuthorizationInterface.h"
+#include "AuthorizationController.h"
+#include "UserManagerForm.h"
+	
 
 namespace HomeLibrary {
 
@@ -15,6 +19,8 @@ namespace HomeLibrary {
 	public ref class AuthorizationForm : public System::Windows::Forms::Form
 	{
 	public:
+		AuthorizationController^ auto_ctr;
+		UserManagerForm^ user_manager_form;
 		AuthorizationForm(void)
 		{
 			InitializeComponent();
@@ -109,6 +115,7 @@ namespace HomeLibrary {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(324, 26);
 			this->textBox2->TabIndex = 4;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &AuthorizationForm::textBox2_TextChanged);
 			// 
 			// label3
 			// 
@@ -145,9 +152,14 @@ namespace HomeLibrary {
 #pragma endregion
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ login = textBox2->Text;
+		int password = Convert::ToInt32(textBox1->Text);
+		if (auto_ctr->authorization(login, password)) {
+			this->Close();
+			user_manager_form->Show();
+		}
 	}
-		//  String^ login = textBox1->Text;
-		//  String^ password = textBox1->Text;
-
-	};
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

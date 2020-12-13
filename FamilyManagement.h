@@ -1,13 +1,17 @@
 #pragma once
 #include "Role.h"
-ref class FamilyManagement
+#include "Users.h"
+#include "IUserManager.h"
+ref class FamilyManagement : public IUserManager
 {
 public:
-//	void createFamilyMember(System::String^,int, Role, System::String^, System::String^);
-//	bool deleteFamilyMember(System::String^);
-//	bool transferRights(System::String^);
-//	bool addRestrictions(System::String^);
-//
+	Users^ users;
+	void createFamilyMember(System::String^,int, Role, System::String^, System::String^);
+	bool deleteFamilyMember(System::String^);
+	bool transferRights(System::String^);
+	bool addRestrictions(System::String^);
+	System::String^ showAllUsers();
+	bool editFamilyMember(System::String^,int);
 
 };
 
