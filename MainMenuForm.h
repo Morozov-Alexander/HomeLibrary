@@ -16,6 +16,7 @@ namespace HomeLibrary {
 	public ref class MainMenuForm : public System::Windows::Forms::Form
 	{
 	public:
+		HomeLibrary::UserManagerForm^ um;
 		MainMenuForm(void)
 		{
 			InitializeComponent();
@@ -90,7 +91,7 @@ namespace HomeLibrary {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		HomeLibrary::UserManagerForm^ um = gcnew HomeLibrary::UserManagerForm;
+		this->Hide();
 		um->Show();
 
 	}

@@ -1,8 +1,10 @@
 #include "FamilyManagement.h"
 
-void FamilyManagement::createFamilyMember(System::String^ name, int password, Role role, System::String^ login, System::String^ surname)
+void FamilyManagement::createFamilyMember(System::String^ name, int password, Role role, System::String^ login)
 {
-	throw gcnew System::NotImplementedException();
+	User^ new_user = gcnew User(name, password, login, role);
+	users->users.push_back(new_user);
+	showAllUsers();
 }
 
 bool FamilyManagement::deleteFamilyMember(System::String^ login)
@@ -22,8 +24,8 @@ bool FamilyManagement::addRestrictions(System::String^ login)
 
 System::String^ FamilyManagement::showAllUsers()
 {
-	throw gcnew System::NotImplementedException();
-	// TODO: вставьте здесь оператор return
+	System::Console::WriteLine(users->users.size());
+	return "ok";
 }
 
 bool FamilyManagement::editFamilyMember(System::String^ name, int password)

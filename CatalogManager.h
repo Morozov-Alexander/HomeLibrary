@@ -3,7 +3,7 @@
 #include "MediaLoader.h"
 #include "MediaControler.h"
 
-ref class CatalogManager : public ICataloCont
+ref class CatalogManager //: public ICataloCont
 {
 public:
 	AllMedia^ all_media;

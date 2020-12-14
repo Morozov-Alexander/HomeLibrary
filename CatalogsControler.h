@@ -1,7 +1,7 @@
 #pragma once
 #include "ICatalogsController.h"
 #include "Catalogs.h"
-ref class CatalogsControler : public ICatalogsController
+ref class CatalogsControler //: public ICatalogsController
 { public:
 	Catalogs^ catalogs;
 	System::String^ editCatalog(System::String^ name) override {

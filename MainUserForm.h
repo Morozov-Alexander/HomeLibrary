@@ -1,5 +1,7 @@
 #pragma once
 #include "CatalogsControlForm.h"
+#include "UserManagerForm.h"
+
 namespace HomeLibrary {
 
 	using namespace System;
@@ -15,6 +17,8 @@ namespace HomeLibrary {
 	public ref class MainUserForm : public System::Windows::Forms::Form
 	{
 	public:
+		HomeLibrary::UserManagerForm^ um;
+
 		MainUserForm(void)
 		{
 			InitializeComponent();
@@ -76,7 +80,6 @@ namespace HomeLibrary {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		HomeLibrary::CatalogsControlForm^ um = gcnew HomeLibrary::CatalogsControlForm;
 		um->Show();
 	}
 	};

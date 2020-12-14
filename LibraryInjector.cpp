@@ -8,10 +8,11 @@
 #include "CatalogsControler.h"
 #include "FamilyManagement.h"
 #include "CatalogManager.h"
+#include "CreateUserForm.h"
 void LibraryInjector::initialization()
 {
-	Catalogs catalogs;
-	AllMedia all_media;
+	Catalogs^ catalogs;
+	AllMedia^ all_media;
 	Users^ users = gcnew Users();
 
 	User^ user = gcnew User("alex", 123, "alex", Role(FAMILY_MEMBER));
@@ -27,11 +28,12 @@ void LibraryInjector::initialization()
 	AuthorizationController^ autorization = gcnew AuthorizationController();
 	autorization->users = users;
 
-	FamilyManagement familyManagment;
-	familyManagment.users = users;
+	FamilyManagement^ familyManagment =  gcnew FamilyManagement();
+	familyManagment->users = users;
 
-	HomeLibrary::MainMenuForm^manager_form = gcnew HomeLibrary::MainMenuForm;
+	HomeLibrary::MainMenuForm^ manager_form = gcnew HomeLibrary::MainMenuForm;
 	HomeLibrary::MainUserForm^ user_form = gcnew HomeLibrary::MainUserForm;
+
 	HomeLibrary::AuthorizationForm^ aut_form = gcnew HomeLibrary::AuthorizationForm;
 
 	aut_form->auto_ctr = autorization;
@@ -41,10 +43,23 @@ void LibraryInjector::initialization()
 	LibraryManagement^ lib_manager = gcnew LibraryManagement();
 
 	CatalogManager^ c_manager = gcnew CatalogManager();
-	FamilyManagement^ fm_manager = gcnew FamilyManagement();
 	CatalogsControler^ cat_manager = gcnew CatalogsControler();
 
+	lib_manager->fm = familyManagment;
+	lib_manager->cat_cont = cat_manager;
+	lib_manager->cat = c_manager;
+	lib_manager->cat_cont->catalogs = catalogs;
+	lib_manager->cat->all_media = all_media;
 
+	HomeLibrary::CreateUserForm^ create_user = gcnew HomeLibrary::CreateUserForm;
+	create_user->lib_manager = lib_manager;
+
+	HomeLibrary::UserManagerForm^ um = gcnew HomeLibrary::UserManagerForm;
+	um->lib_manager = lib_manager;
+	um->create_user = create_user;
+
+	manager_form->um = um;
+	user_form->um = um;
 
 	aut_form->Show();
 }

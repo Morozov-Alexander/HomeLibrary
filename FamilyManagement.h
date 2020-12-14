@@ -6,7 +6,7 @@ ref class FamilyManagement
 {
 public:
 	Users^ users;
-	void createFamilyMember(System::String^,int, Role, System::String^, System::String^) override;
+	void createFamilyMember(System::String^,int, Role, System::String^) override;
 	bool deleteFamilyMember(System::String^) override;
 	bool transferRights(System::String^) override;
 	bool addRestrictions(System::String^) override;

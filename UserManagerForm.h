@@ -1,5 +1,8 @@
 #pragma once
-#include "CatalogsControlForm.h"
+#include "FamilyManagement.h"
+#include "LibraryManagement.h"
+#include "CreateUserForm.h"
+
 namespace HomeLibrary {
 
 	using namespace System;
@@ -15,6 +18,8 @@ namespace HomeLibrary {
 	public ref class UserManagerForm : public System::Windows::Forms::Form
 	{
 	public:
+		LibraryManagement^ lib_manager;
+		CreateUserForm^ create_user;
 		UserManagerForm(void)
 		{
 			InitializeComponent();
@@ -79,6 +84,7 @@ namespace HomeLibrary {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Добавить члена семьи";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &UserManagerForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -127,8 +133,10 @@ namespace HomeLibrary {
 	private: System::Void UserManagerForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		HomeLibrary::CatalogsControlForm^ um = gcnew HomeLibrary::CatalogsControlForm;
-		um->Show();
+
 	}
-	};
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		create_user->Show();
+	}
+};
 }
