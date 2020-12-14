@@ -1,7 +1,7 @@
 #pragma once
 #include "Comment.h"
 #include "Rating.h"
-ref class MediaController
+ref class IMediaController
 {
 	virtual System::String^ addComment(System::String^, Media^) = 0;
 	virtual System::String^ rename(System::String^, Media^) = 0;

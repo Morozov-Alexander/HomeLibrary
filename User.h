@@ -20,6 +20,13 @@ public:
 		this->login = login;
 	}
 
+	User(System::String^ name, int password, System::String^ login, Role role) {
+		this->name = name;
+		this->password = password;
+		this->login = login;
+		this->role = role;
+	}
+
 	System::String^ getName();
 	void setName(System::String^ name);
 	void setSurName(System::String^);

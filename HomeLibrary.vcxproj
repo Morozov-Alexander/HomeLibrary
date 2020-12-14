@@ -155,7 +155,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="AuthorizationInterface.h" />
+    <ClInclude Include="CatalogManager.h" />
     <ClInclude Include="Catalogs.h" />
+    <ClInclude Include="CatalogsControler.h" />
     <ClInclude Include="CatalogsControlForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -168,6 +170,9 @@
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="ICataloCont.h" />
+    <ClInclude Include="ICatalogsController.h" />
+    <ClInclude Include="IMediaController.h" />
     <ClInclude Include="IMediaLoader.h" />
     <ClInclude Include="Input.h">
       <FileType>CppForm</FileType>
@@ -180,6 +185,7 @@
     </ClInclude>
     <ClInclude Include="Media.h" />
     <ClInclude Include="MediaCatalog.h" />
+    <ClInclude Include="MediaControler.h" />
     <ClInclude Include="MediaLoader.h" />
     <ClInclude Include="Music.h" />
     <ClInclude Include="Photo.h" />
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogsControlForm.resx">
       <DependentUpon>CatalogsControlForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Input.resx">
       <DependentUpon>Input.h</DependentUpon>

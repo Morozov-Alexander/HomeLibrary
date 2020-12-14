@@ -1,5 +1,5 @@
 #pragma once
-enum class Role
+enum  Role
 {
 	HAD_OF_FAMILY,
 	FAMILY_MEMBER

@@ -12,6 +12,7 @@ private:
 
 
 public:
+	~Media(){}
 	void setId(System::String^ id);
 	void setName(System::String^ name);
 	void setDate(System::String^ date);
