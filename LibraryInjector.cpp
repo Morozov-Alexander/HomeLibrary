@@ -9,6 +9,11 @@
 #include "FamilyManagement.h"
 #include "CatalogManager.h"
 #include "CreateUserForm.h"
+
+#include "AddRestrictionsFoem.h"
+#include "ChangeRoleForm.h"
+#include "DeleteFamilyMemberForm.h"
+
 void LibraryInjector::initialization()
 {
 	Catalogs^ catalogs;
@@ -54,12 +59,26 @@ void LibraryInjector::initialization()
 	HomeLibrary::CreateUserForm^ create_user = gcnew HomeLibrary::CreateUserForm;
 	create_user->lib_manager = lib_manager;
 
+	HomeLibrary::AddRestrictionsFoem^ rest_form = gcnew HomeLibrary::AddRestrictionsFoem;
+	HomeLibrary::ChangeRoleForm^ ch_role_form = gcnew HomeLibrary::ChangeRoleForm;
+	HomeLibrary::DeleteFamilyMemberForm^ del_fm_member = gcnew HomeLibrary::DeleteFamilyMemberForm;
+	rest_form->lib_manager = lib_manager;
+	ch_role_form->lib_manager = lib_manager;
+	del_fm_member->lib_manager = lib_manager;
+
 	HomeLibrary::UserManagerForm^ um = gcnew HomeLibrary::UserManagerForm;
+	
 	um->lib_manager = lib_manager;
 	um->create_user = create_user;
+	um->rest_form = rest_form;
+	um->ch_role_form = ch_role_form;
+	um->del_fm_member = del_fm_member;
 
 	manager_form->um = um;
 	user_form->um = um;
+
+	
+
 
 	aut_form->Show();
 }

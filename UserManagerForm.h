@@ -3,6 +3,11 @@
 #include "LibraryManagement.h"
 #include "CreateUserForm.h"
 
+#include "AddRestrictionsFoem.h"
+#include "ChangeRoleForm.h"
+#include "DeleteFamilyMemberForm.h"
+
+
 namespace HomeLibrary {
 
 	using namespace System;
@@ -18,8 +23,14 @@ namespace HomeLibrary {
 	public ref class UserManagerForm : public System::Windows::Forms::Form
 	{
 	public:
+	
+
 		LibraryManagement^ lib_manager;
 		CreateUserForm^ create_user;
+
+		AddRestrictionsFoem^ rest_form;
+		ChangeRoleForm^ ch_role_form;
+		DeleteFamilyMemberForm^ del_fm_member;
 		UserManagerForm(void)
 		{
 			InitializeComponent();
@@ -94,6 +105,7 @@ namespace HomeLibrary {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Редактировать члена семьи";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &UserManagerForm::button3_Click);
 			// 
 			// button4
 			// 
@@ -103,6 +115,7 @@ namespace HomeLibrary {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Передать права главы";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &UserManagerForm::button4_Click);
 			// 
 			// button5
 			// 
@@ -112,6 +125,7 @@ namespace HomeLibrary {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Добавить ограничения";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &UserManagerForm::button5_Click);
 			// 
 			// UserManagerForm
 			// 
@@ -133,10 +147,21 @@ namespace HomeLibrary {
 	private: System::Void UserManagerForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		del_fm_member->Show();
 
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		create_user->Show();
 	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		ch_role_form->Show();
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		rest_form->Show();
+
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
 };
 }

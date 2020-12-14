@@ -80,6 +80,7 @@ namespace HomeLibrary {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		HomeLibrary::CatalogsControlForm^ um = gcnew HomeLibrary::CatalogsControlForm;
 		um->Show();
 	}
 	};

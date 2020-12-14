@@ -134,6 +134,9 @@
     <ClCompile Include="Users.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddRestrictionsFoem.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="AllMedia.h" />
     <ClInclude Include="AuthorizationController.h" />
     <ClInclude Include="AuthorizationForm.h">
@@ -146,8 +149,14 @@
     <ClInclude Include="CatalogsControlForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ChangeRoleForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Comment.h" />
     <ClInclude Include="CreateUserForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DeleteFamilyMemberForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
@@ -184,14 +193,23 @@
     <ClInclude Include="Users.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddRestrictionsFoem.resx">
+      <DependentUpon>AddRestrictionsFoem.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogsControlForm.resx">
       <DependentUpon>CatalogsControlForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRoleForm.resx">
+      <DependentUpon>ChangeRoleForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateUserForm.resx">
       <DependentUpon>CreateUserForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFamilyMemberForm.resx">
+      <DependentUpon>DeleteFamilyMemberForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Input.resx">
       <DependentUpon>Input.h</DependentUpon>

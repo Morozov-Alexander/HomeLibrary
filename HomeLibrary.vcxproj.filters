@@ -161,6 +161,15 @@
     <ClInclude Include="MainUserForm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="DeleteFamilyMemberForm.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeRoleForm.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AddRestrictionsFoem.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
