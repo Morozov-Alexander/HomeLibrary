@@ -118,38 +118,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AddUserForm.cpp" />
-    <ClCompile Include="AllMedia.cpp" />
     <ClCompile Include="AuthorizationController.cpp" />
-    <ClCompile Include="AuthorizationForm.cpp" />
-    <ClCompile Include="Catalogs.cpp" />
-    <ClCompile Include="CatalogsControlForm.cpp" />
     <ClCompile Include="Comment.cpp" />
-    <ClCompile Include="CreateUserForm.cpp" />
-    <ClCompile Include="DeleteUserForm.cpp" />
     <ClCompile Include="FamilyManagement.cpp" />
     <ClCompile Include="Film.cpp" />
     <ClCompile Include="HomeLibrary.cpp" />
-    <ClCompile Include="Input.cpp" />
     <ClCompile Include="LibraryInjector.cpp" />
-    <ClCompile Include="LibraryManagement.cpp" />
-    <ClCompile Include="MainMenuForm.cpp" />
-    <ClCompile Include="MainUserForm.cpp" />
     <ClCompile Include="Media.cpp" />
     <ClCompile Include="MediaCatalog.cpp" />
-    <ClCompile Include="MediaLoader.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Photo.cpp" />
     <ClCompile Include="Rating.cpp" />
     <ClCompile Include="Restriction.cpp" />
     <ClCompile Include="User.cpp" />
-    <ClCompile Include="UserManagerForm.cpp" />
     <ClCompile Include="Users.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddUserForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="AllMedia.h" />
     <ClInclude Include="AuthorizationController.h" />
     <ClInclude Include="AuthorizationForm.h">
@@ -164,9 +148,6 @@
     </ClInclude>
     <ClInclude Include="Comment.h" />
     <ClInclude Include="CreateUserForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="DeleteUserForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FamilyManagement.h" />
