@@ -6,7 +6,6 @@ ref class CatalogsControler : public ICatalogsController
 	Catalogs^ catalogs;
 	System::String^ editCatalog(System::String^ name) override {
 		return name;
-
 	}
 	bool deleteCatalog(System::String^) override {
 		return 0;
@@ -14,14 +13,14 @@ ref class CatalogsControler : public ICatalogsController
 	MediaCatalog^ createCatalog(System::String^ name) override {
 		return catalogs->media_catalog[0];
 	}
-	System::String^ showCatalog(System::String^ name) {
+	System::String^ showCatalog(System::String^ name) override {
 		return name;
 
 	}
-	System::String^ addPrivacy(System::String^ nam,bool) {
+	System::String^ addPrivacy(System::String^ nam,bool) override {
 		return nam;
 	}
-	System::String^ deletePrivacy(System::String^ nam) {
+	System::String^ deletePrivacy(System::String^ nam) override {
 		return nam;
 
 	}

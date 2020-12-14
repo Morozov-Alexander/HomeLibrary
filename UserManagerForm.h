@@ -1,5 +1,5 @@
 #pragma once
-
+#include "CatalogsControlForm.h"
 namespace HomeLibrary {
 
 	using namespace System;
@@ -104,7 +104,7 @@ namespace HomeLibrary {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(352, 127);
 			this->button5->TabIndex = 4;
-			this->button5->Text = L"button5";
+			this->button5->Text = L"Добавить ограничения";
 			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// UserManagerForm
@@ -127,6 +127,8 @@ namespace HomeLibrary {
 	private: System::Void UserManagerForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		HomeLibrary::CatalogsControlForm^ um = gcnew HomeLibrary::CatalogsControlForm;
+		um->Show();
 	}
 	};
 }

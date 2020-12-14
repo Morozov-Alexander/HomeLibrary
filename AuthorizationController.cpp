@@ -1,12 +1,16 @@
 #include "AuthorizationController.h"
-bool AuthorizationController::authorization(System::String^ login, int password)
+int AuthorizationController::authorization(System::String^ login, int password)
 {
 	User^ find_user = checkLogin(login);
 	if (find_user) {
-		if (checkPassword(find_user,password))
-			return true;
+		bool check = checkPassword(find_user, password);
+
+		if (check && find_user->getRole() == Role(HAD_OF_FAMILY))
+			return 1;
+		if (check && find_user->getRole() != Role(HAD_OF_FAMILY))
+			return 2;
 	}
-	return false;
+	return 0;
 }
 
 User^ AuthorizationController::checkLogin(System::String^ login)

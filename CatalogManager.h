@@ -12,6 +12,7 @@ public:
 		media->~Media(); //Удаление медии
 	}
 	Media^ downloadMedia(System::String^) override {
+		return gcnew Media();
 	}
 	void editMedia(Media^media , System::String^) override {
 		// изменение полей медии

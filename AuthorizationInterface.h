@@ -2,5 +2,5 @@
 ref class AuthorizationInterface
 {
 public:
-	virtual bool authorization(System::String^ login, int password) = 0;
+	virtual int authorization(System::String^ login, int password) = 0;
 };

@@ -40,16 +40,6 @@ void User::setPassword(int password)
 	 return password;
  }
 
- void User::setRole(Role role)
-{
-	this->role = role;
-}
-
- Role User::getRole(Role)
-{
-	return	role;
-}
-
  void User::addRestrictions(Restriction^ restr)
  {
 	 restrictions.push_back(restr);

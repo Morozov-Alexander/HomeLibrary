@@ -134,6 +134,7 @@
     <ClCompile Include="LibraryInjector.cpp" />
     <ClCompile Include="LibraryManagement.cpp" />
     <ClCompile Include="MainMenuForm.cpp" />
+    <ClCompile Include="MainUserForm.cpp" />
     <ClCompile Include="Media.cpp" />
     <ClCompile Include="MediaCatalog.cpp" />
     <ClCompile Include="MediaLoader.cpp" />
@@ -183,6 +184,9 @@
     <ClInclude Include="MainMenuForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MainUserForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Media.h" />
     <ClInclude Include="MediaCatalog.h" />
     <ClInclude Include="MediaControler.h" />
@@ -214,9 +218,15 @@
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainUserForm.resx">
+      <DependentUpon>MainUserForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagerForm.resx">
       <DependentUpon>UserManagerForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

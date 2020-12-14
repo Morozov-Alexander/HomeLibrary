@@ -3,7 +3,7 @@
 #include "AuthorizationController.h"
 #include "UserManagerForm.h"
 #include "MainMenuForm.h"
-	
+#include "MainUserForm.h"
 
 namespace HomeLibrary {
 
@@ -22,6 +22,8 @@ namespace HomeLibrary {
 	public:
 		AuthorizationController^ auto_ctr;
 		MainMenuForm^ user_manager_form;
+		MainUserForm^ user_main_form;
+
 		AuthorizationForm(void)
 		{
 			InitializeComponent();
@@ -155,9 +157,14 @@ namespace HomeLibrary {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ login = textBox2->Text;
 		int password = Convert::ToInt32(textBox1->Text);
-		if (auto_ctr->authorization(login, password)) {
+		int answer = auto_ctr->authorization(login, password);
+		if (answer == 1) {
 			this->Close();
 			user_manager_form->Show();
+		}
+		if (answer == 2) {
+			this->Close();
+			user_main_form->Show();
 		}
 	}
 	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {

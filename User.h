@@ -35,8 +35,14 @@ public:
 	void setLogin(System::String^);
 	System::String^ getLogin();
 	int getPassword();
-	void setRole(Role);
-	Role getRole(Role);
+	void setRole(Role)
+	{
+		this->role = role;
+	}
+	Role getRole()
+	{
+		return	role;
+	}
 
 	void addRestrictions(Restriction^);
 	cliext::vector<Restriction^> getRestrictions();
